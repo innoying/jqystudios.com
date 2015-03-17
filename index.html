@@ -1,0 +1,1037 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JQY Studios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .art{
+      padding-bottom: 20px;
+    }
+
+    .button{
+      padding-bottom: 50px;
+      padding-top: 10px;
+    }
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    
+    .holder{
+	    height: 320px;
+    }
+    
+    .row{
+	    padding-bottom: 40px;
+    }
+    
+    .art1{
+	    background:url(img/artwork/1.png) no-repeat center center;
+    }
+    
+    .art2{
+	    background:url(img/artwork/2.png) no-repeat center center;
+    }
+    
+    .art3{
+	    background:url(img/artwork/3.png) no-repeat center center;
+    }
+    
+    .art4{
+	    background:url(img/artwork/4.png) no-repeat center center;
+    }
+    
+    .art5{
+	    background:url(img/artwork/5.png) no-repeat center center;
+    }
+    
+    .art6{
+	    background:url(img/artwork/6.png) no-repeat center center;
+    }
+    
+    .art7{
+	    background:url(img/artwork/7.png) no-repeat center center;
+    }
+    
+    .art8{
+	    background:url(img/artwork/8.png) no-repeat center center;
+    }
+    
+    .art9{
+	    background:url(img/artwork/9.png) no-repeat center center;
+    }
+    
+    .art10{
+	    background:url(img/artwork/10.png) no-repeat center center;
+    }
+    
+    .art11{
+	    background:url(img/artwork/11.png) no-repeat center center;
+    }
+    
+    .art12{
+	    background:url(img/artwork/12.png) no-repeat center center;
+    }
+    
+    .art13{
+	    background:url(img/artwork/13.png) no-repeat center center;
+    }
+    
+    .art14{
+	    background:url(img/artwork/14.png) no-repeat center center;
+    }
+    
+    .art15{
+	    background:url(img/artwork/15.png) no-repeat center center;
+    }
+    
+    .art16{
+	    background:url(img/artwork/16.png) no-repeat center center;
+    }
+    
+    @media (max-width: 979px) {
+    	.alignment{
+	    	text-align: center;
+    	}
+	    .mart1{
+			background:none;
+		}
+		.mart2{
+			background:none;
+		}
+		.mart3{
+			background:none;
+		}
+		.mart4{
+			background:none;
+		}
+		.mart5{
+			background:none;
+		}
+		.mart6{
+			background:none;
+		}
+		.mart7{
+			background:none;
+		}
+		.mart8{
+			background:none;
+		}
+		.mart9{
+			background:none;
+		}
+		.mart10{
+			background:none;
+		}
+		.mart11{
+			background:none;
+		}
+		.mart12{
+			background:none;
+		}
+		.mart13{
+			background:none;
+		}
+		.mart14{
+			background:none;
+		}
+		.mart15{
+			background:none;
+		}
+		.mart16{
+			background:none;
+		}
+    }
+    
+    @media (min-width: 979px) {
+    	.alignment{
+	    	text-align: right;
+    	}
+    	.mart1{
+			background:url(img/artwork/1.png) no-repeat left center;
+		}
+		.mart2{
+			background:url(img/artwork/2.png) no-repeat left center;
+	    }
+	    .mart3{
+			background:url(img/artwork/3.png) no-repeat left center;
+	    }
+	    .mart4{
+			background:url(img/artwork/4.png) no-repeat left center;
+	    }
+	    .mart5{
+			background:url(img/artwork/5.png) no-repeat left center;
+	    }
+	    .mart6{
+			background:url(img/artwork/6.png) no-repeat left center;
+	    }
+	    .mart7{
+			background:url(img/artwork/7.png) no-repeat left center;
+	    }
+	    .mart8{
+			background:url(img/artwork/8.png) no-repeat left center;
+	    }
+	    .mart9{
+			background:url(img/artwork/9.png) no-repeat left center;
+	    }
+	    .mart10{
+			background:url(img/artwork/10.png) no-repeat 20% 50%;
+	    }
+	    .mart11{
+			background:url(img/artwork/11.png) no-repeat left center;
+	    }
+	    .mart12{
+			background:url(img/artwork/12.png) no-repeat left center;
+	    }
+	    .mart13{
+			background:url(img/artwork/13.png) no-repeat left center;
+	    }
+	    .mart14{
+			background:url(img/artwork/14.png) no-repeat left center;
+	    }
+	    .mart15{
+			background:url(img/artwork/15.png) no-repeat left center;
+	    }
+	    .mart16{
+			background:url(img/artwork/16.png) no-repeat left center;
+	    }
+    }
+
+    h3{
+	    line-height: 30px;
+    }
+    
+    button.btn.btn-large{
+	    margin-top: 15px;
+	    margin-bottom: 40px;
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">JQY Studios</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a class="scroll" href="#Artwork">Artwork</a></li>
+                <li><a class="scroll" href="#Statement">Artist Statement</a></li>
+                <li><a class="scroll" href="#Biography">Artist Biography</a></li>
+                <li><a class="scroll" href="#Collections">Collections</a></li>
+                <li><a class="scroll" href="#Contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/examples/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Christian Based</h1>
+              <p class="lead">James Quentin Young creates artwork based in Christian principals with the cross as the primary symbol of his work.</p>
+              <a class="btn btn-large scroll" href="#Statement">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/examples/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Original Artwork</h1>
+              <p class="lead">James Quentin Young creates his art from old wood, metal, and found objects.</p>
+              <a class="btn btn-large scroll" href="#Statement">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+      <a id="Statement"></a>
+      <h1>Artist Statement</h1>
+      <p class="lead">James Quentin Young creates his art from old wood, metal, and found objects. He has been an early advocate for recycling and renovating discarded items.  His skill in restoring furniture, his study of jewelry making, and an MFA in painting are combined to create beautiful and provocative works of art. They  may tell a Biblical story or simply be unique artworks in which the viewer  recognizes bits and pieces from his own past.  Young demonstrates his Christian faith with the cross as the primary symbol of his work.  Using discarded and broken items, the art portrays Christ's acceptance of our flawed and rejected lives and the transformation through His death and resurrection.</p>
+      <hr class="featurette-divider">
+      <a id="Biography"></a>
+      <h1>Artist Biography</h1>
+      <p class="lead">James Young is a Christian artist, born in 1936 on the "West Side" of St. Paul, MN, a place of multiple ethnic and religious groups.  He graduated from Macalaster College with a BA in art education and taught art in public schools for 32 years.  He continued his education with an MFA in painting at the U. of the Americas in Mexico City. In 2008  Mr. Young was an artist-in-residence at the Henry Luce Center in Washington, D.C., and in Prague, Czech Republic in 2009.</p>
+      <hr class="featurette-divider">
+      <a id="Artwork"></a>
+      <div class="row">
+      	<div class="span4">
+        	<div class="holder art12"></div>
+        	<h3>Garden Wall Cross</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art12">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art6"></div>
+        	<h3>Cross, Earth, Shroud</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art6">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art15"></div>
+        	<h3>Phoenix Bird III</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art15">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art7"></div>
+        	<h3>Cross with Quilt</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art7">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art4"></div>
+        	<h3>Butterfly Cross</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art4">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art9"></div>
+        	<h3>Alignment</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art9">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art10"></div>
+        	<h3>Centurion</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art10">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art14"></div>
+        	<h3>At the Temple Door</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art14">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art3"></div>
+        	<h3>Jesus Remember Me</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art3">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art1"></div>
+        	<h3>Crown of Thorns</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art1">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art8"></div>
+        	<h3>California Cross</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art8">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art11"></div>
+        	<h3>Up #2</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art11">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art16"></div>
+        	<h3>The Promise</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art16">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art13"></div>
+        	<h3>Golden Wind</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art13">View details &raquo;</button>
+        </div>
+        <div class="span4">
+        	<div class="holder art2"></div>
+        	<h3>Cross with Quatre Foil</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art2">View details &raquo;</button>
+        </div>
+        <div class="span4"></div>
+        <div class="span4">
+	        <div class="holder art5"></div>
+        	<h3>Swirl</h3>
+        	<button class="btn btn-large" data-toggle="modal" data-target="#art5">View details &raquo;</button>
+	    </div>
+      </div> 
+      <hr class="featurette-divider">
+      <a id="Collections"></a>
+      <h1>Collections</h1>
+      <p class="lead">
+        <b>Institutions</b><br>
+        St. Timothy Lutheran Church, St. Paul, Mn<br>
+        First Presbyterian Church, Fort Wayne, IN<br>
+        Mt. Carmel, Alexandria, MN<br>
+        Cross View Lutheran Church, Edina, MN<br>
+        Word of Peace Lutheran Church, Rogers, MN<br>
+        Basilica of Saint Mary, Minneapolis, MN<br>
+        Bethel University, St. Paul, MN<br>
+        Westminster Presbyterian Church, Minneapolis, MN<br>
+        Central Lutheran Church, Minneapolis, MN<br>
+        Wesley Theological Seminary, Washington, DC<br>
+        Luther Seminary, St. Paul, MN<br>
+        Tweed Gallery, U. of MN, Duluth, MN<br>
+        Macalester College, St. Paul, MN<br>
+        St. Louis Park Medical Center, St. Louis Park, MN<br>
+        <b>Private Collections</b><br>
+        Midwest, East Coast, and Southwest in the US<br>
+        England, Mexico, and Czech Republic
+      </p>
+      <hr class="featurette-divider">
+      <a id="Contact"></a>
+      <h1>Contact</h1>
+      <p class="lead">
+        Minnesota sales tax of 6.87% is added to the cost. Shipping costs are the buyer's responsibility. The artist also offers an "Artist Exhibition". A contract will be sent upon request. Please contact via <a href="mailto:info@jqystudios.com">info@jqystudios.com</a>.
+      </p>
+      <hr class="featurette-divider">
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2012 JQY Studios</p>
+      </footer>
+
+      <!-- Modals -->
+      
+	    <div id="art1" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Crown of Thorns</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art1 hidden-desktop"></div>
+	        	<div class="mart1 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">8 7/8" x 11 3/4"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Cork/Glue,<br>Plastic, Paint</p>
+			        <h3>Date</h3>
+			        <p class="lead">2010</p>
+			        <h3>Price</h3>
+			        <p class="lead">$300</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art2" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Cross with Quatre Foil</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art2 hidden-desktop"></div>
+	        	<div class="mart2 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">25.75" x 29" x 2"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Foil</p>
+			        <h3>Date</h3>
+			        <p class="lead">2012</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,200</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art3" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Jesus, Remember Me</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art3 hidden-desktop"></div>
+	        	<div class="mart3 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">18.5" x 42.5" x 1.75"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Leather,<br>Foil, Plastic</p>
+			        <h3>Date</h3>
+			        <p class="lead">2009</p>
+			        <h3>Price</h3>
+			        <p class="lead">$2,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art4" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Butterfly Cross</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art4 hidden-desktop"></div>
+	        	<div class="mart4 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">29.5" x 46.25" x 2.5"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Paint</p>
+			        <h3>Date</h3>
+			        <p class="lead">2009</p>
+			        <h3>Price</h3>
+			        <p class="lead">$2,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art5" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Swirl</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art5 hidden-desktop"></div>
+	        	<div class="mart5 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">23.75" x 23.75" x 1.5"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Plastic, Foil</p>
+			        <h3>Date</h3>
+			        <p class="lead">2012</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,800</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art6" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Cross, Earth, Shroud</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art6 hidden-desktop"></div>
+	        	<div class="mart6 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">35" x 48" x 2"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Plastic, Wax</p>
+			        <h3>Date</h3>
+			        <p class="lead">2006</p>
+			        <h3>Price</h3>
+			        <p class="lead">$3,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art7" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Cross with Quilt</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art7 hidden-desktop"></div>
+	        	<div class="mart7 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">21.5" x 35.75" x 2.5"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Plastic, Cardboard</p>
+			        <h3>Date</h3>
+			        <p class="lead">2007</p>
+			        <h3>Price</h3>
+			        <p class="lead">$2,500</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art8" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>California Cross</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art8 hidden-desktop"></div>
+	        	<div class="mart8 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">8" x 15" x 1"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Plastic</p>
+			        <h3>Date</h3>
+			        <p class="lead">2010</p>
+			        <h3>Price</h3>
+			        <p class="lead">$500</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art9" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Alignment</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art9 hidden-desktop"></div>
+	        	<div class="mart9 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">23" x 29.125" x 3"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Ink, Plastic,<br>Synthetic Pearls</p>
+			        <h3>Date</h3>
+			        <p class="lead">2009</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art10" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Centurion</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art10 hidden-desktop"></div>
+	        	<div class="mart10 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">30" x 40.5" x 2.5"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Cork,<br>Foil, Plastic, Fiber</p>
+			        <h3>Date</h3>
+			        <p class="lead">2009</p>
+			        <h3>Price</h3>
+			        <p class="lead">$2,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art11" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Up #2</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art11 hidden-desktop"></div>
+	        	<div class="mart11 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">25.25" x 31.5" x 2"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Plaster,<br>Paint, Plastic, Foil</p>
+			        <h3>Date</h3>
+			        <p class="lead">2010</p>
+			        <h3>Price</h3>
+			        <p class="lead">$2,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art12" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Garden Wall Cross</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art12 hidden-desktop"></div>
+	        	<div class="mart12 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">27" x 33.5" x 3/4"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal</p>
+			        <h3>Date</h3>
+			        <p class="lead">2006</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,000</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art13" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Golden Wind</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art13 hidden-desktop"></div>
+	        	<div class="mart13 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">30.25" x 48.5" x 2"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Foil</p>
+			        <h3>Date</h3>
+			        <p class="lead">2012</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,200</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art14" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>At the Temple Door</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art14 hidden-desktop"></div>
+	        	<div class="mart14 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">26.25" x 33.75" x 2.75"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Cardboard,<br>Beads, Stain, Paint</p>
+			        <h3>Date</h3>
+			        <p class="lead">2009</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,500</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art15" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>Phoenix Bird III</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art15 hidden-desktop"></div>
+	        	<div class="mart15 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">11.25" x 26" x 1.5"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Rubber,<br>Plastic, Foil</p>
+			        <h3>Date</h3>
+			        <p class="lead">2007</p>
+			        <h3>Price</h3>
+			        <p class="lead">$700</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+        <div id="art16" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-header">
+	          <button type="button" class="close" aria-hidden="true">×</button>
+	          <h3>The Promise</h3>
+	        </div>
+	    	<div class="modal-body">
+	    		<div class="holder art16 hidden-desktop"></div>
+	        	<div class="mart16 alignment">
+			        <h3>Size</h3>
+			        <p class="lead">27.5" x 27.5" x 1"</p>
+			        <h3>Materials</h3>
+			        <p class="lead">Wood, Metal, Plastic, Foil</p>
+			        <h3>Date</h3>
+			        <p class="lead">2011</p>
+			        <h3>Price</h3>
+			        <p class="lead">$1,200</p>
+			    </div>
+		    </div>
+	        <div class="modal-footer">
+		        <button data-dismiss="modal" class="btn">Close</button>
+		        <a href="#Contact" data-dismiss="modal" class="scroll btn">Contact</a>
+	        </div>
+        </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function($){
+      $(".scroll").click(function(event){   
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top-100}, 750);
+      });
+    });
+    </script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel({interval: 4000})
+        })
+      }(window.jQuery)
+    </script>
+    <script src="js/bootstrap-modal.js"></script>
+  </body>
+</html>
